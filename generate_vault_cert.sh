@@ -22,8 +22,7 @@ fi
 
 CERT_HOST=$1
 
-touch "$CERT_HOST.json"
-chmod 600 "$CERT_HOST.json"
+install -m 600 /dev/null "$CERT_HOST.json"
 
 # if curl is successful, echo the resulting json filename so it can be piped into build_cert_files.sh
 curl --silent \

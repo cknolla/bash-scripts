@@ -19,7 +19,7 @@ subjectAltName = @alt_names
 DNS.1 = $FQDN
 EOF
 
-openssl x509 -req -in $FQDN.csr -CA kansaiCA.pem -CAkey kansaiCA.key -CAcreateserial -out $FQDN.crt -days 825 -sha256 -extfile $FQDN.ext
+openssl x509 -req -in $FQDN.csr -CA kansaiCA.pem -CAkey kansaiCA.key -CAcreateserial -out $FQDN.crt -days 1825 -sha256 -extfile $FQDN.ext
 
 cat $FQDN.crt > $FQDN.pem
 cat kansaiCA.pem >> $FQDN.pem
